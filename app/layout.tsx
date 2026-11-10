@@ -5,6 +5,7 @@ import "./globals.css";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { SITE_URL } from "@/lib/constants";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -14,7 +15,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://08-zustand-puce-xi.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   title: "NoteHub",
   description:
     "NoteHub — a simple app for creating and managing personal notes",
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     title: "NoteHub",
     description:
       "NoteHub — a simple app for creating and managing personal notes",
-    url: "/",
+    url: SITE_URL,
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",

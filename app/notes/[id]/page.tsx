@@ -5,6 +5,7 @@ import {
   QueryClient,
 } from "@tanstack/react-query";
 import { fetchNoteById } from "@/lib/api";
+import { SITE_URL } from "@/lib/constants";
 import NoteDetailsClient from "./NoteDetails.client";
 
 interface NoteDetailsProps {
@@ -25,7 +26,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `/notes/${id}`,
+      url: `${SITE_URL}/notes/${id}`,
       images: [
         {
           url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",

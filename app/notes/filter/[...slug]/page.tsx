@@ -6,6 +6,7 @@ import {
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { fetchNotes } from "@/lib/api";
+import { SITE_URL } from "@/lib/constants";
 import { NOTE_TAGS, type NoteTag } from "@/types/note";
 import NotesClient from "./Notes.client";
 
@@ -31,7 +32,7 @@ export async function generateMetadata({
     openGraph: {
       title,
       description,
-      url: `/notes/filter/${slug.join("/")}`,
+      url: `${SITE_URL}/notes/filter/${slug.join("/")}`,
       images: [
         {
           url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",

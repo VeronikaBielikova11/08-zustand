@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import NoteForm from "@/components/NoteForm/NoteForm";
+import { SITE_URL } from "@/lib/constants";
 import css from "./CreateNote.module.css";
 
 export const metadata: Metadata = {
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Create note | NoteHub",
     description: "Create a new note in NoteHub",
-    url: "https://08-zustand-puce-xi.vercel.app/notes/action/create",
+    url: `${SITE_URL}/notes/action/create`,
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
