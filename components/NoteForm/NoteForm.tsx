@@ -3,7 +3,7 @@
 import type { ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { createNote } from "@/lib/api/notes";
+import { createNote } from "@/lib/api";
 import { useNoteDraftStore } from "@/lib/store/noteStore";
 import { NOTE_TAGS, type NewNote, type NoteTag } from "@/types/note";
 import css from "./NoteForm.module.css";
